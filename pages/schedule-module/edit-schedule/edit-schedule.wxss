@@ -1,0 +1,62 @@
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20rpx;
+    border: 1px solid black;
+    /* 内间距padding */
+    padding: 10rpx;
+    /* 外间距margin */
+    margin: 10rpx;
+}
+
+.go-back-button {
+    background-color: gray;
+    width: 40% !important;
+}
+
+.header{
+    font-size: 40rpx;
+    margin-left: 20rpx;
+    font-weight: bold;
+}
+
+.schedule-info {
+    border-radius: 20rpx;
+    border: 1px solid black;
+    /* 外间距 */
+    margin: 10rpx;
+    /* 内间距 */
+    padding: 10rpx;
+}
+
+.form-item{
+    border-radius: 20rpx;
+    border: 1px solid black;
+    /* 外间距 */
+    margin: 10rpx;
+    /* 内间距 */
+    padding: 10rpx;
+}
+
+.input-field{
+    color: rgb(10, 132, 255);
+    font-size: 35rpx;
+}
+
+
+.picker-container{
+    border-radius: 20rpx;
+    border: 1px solid black;
+    /* 外间距 */
+    margin: 10rpx;
+    /* 内间距 */
+    padding: 10rpx;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.picker-display{
+    color: rgb(10, 132, 255);
+    font-size: 35rpx;
+}

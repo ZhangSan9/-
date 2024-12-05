@@ -1,0 +1,48 @@
+<view class="button-group">
+    <button class="go-back-button" bind:tap="goBack">返回</button>
+    <button class="delete-button" bind:tap="deleteCourse">删除</button>
+    <button class="edit-button" bind:tap="editCourse" type="primary">编辑</button>
+</view>
+
+<view class="course-info">
+    <view class="form-item">
+        <label class="label">课程号</label>
+        <view class="text">{{course.courseId}}</view>
+    </view>
+
+    <view class="form-item">
+        <label class="label">课程名</label>
+        <text class="text">{{course.name}}</text>
+    </view>
+
+    <view class="form-item">
+        <label class="label">上课地点</label>
+        <text class="text">{{course.location}}</text>
+    </view>
+
+    <view class="form-item">
+        <label class="label">教师姓名</label>
+        <text class="text">{{course.teacherName}}</text>
+    </view>
+
+    <view class="form-item">
+        <view class="label">第几周上课</view>
+        <text class="text">第{{course.weeks}}周</text>
+    </view>
+
+    <view class="form-item">
+        <label class="label">每周的星期几上课</label>
+        <text class="text">{{course.dayOfWeek}}</text>
+    </view>
+
+    <view class="form-item">
+        <label class="label">第几节上课</label>
+        <text class="text">{{course.startPeriod}}</text>
+    </view>
+
+    <view class="form-item">
+        <label class="label">上几节课</label>
+        <text class="text">{{course.numPeriods}}</text>
+    </view>
+
+</view>

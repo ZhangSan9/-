@@ -1,0 +1,13 @@
+<view class="button-group">
+    <button class="go-back-button" bind:tap="goBack">返回</button>
+    <button class="save-button" type="primary" bind:tap="save">保存</button>
+</view>
+
+<view class="picker-container">
+    <label class="label">开学日期：{{startDate}}</label>
+    <picker mode="date" value="{{startDate}}" start="2023-01-01" end="{{maxDate}}" bindchange="onDateChange">
+        <view class="picker-display">
+            {{startDate}}
+        </view>
+    </picker>
+</view>

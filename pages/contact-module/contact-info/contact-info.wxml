@@ -1,0 +1,31 @@
+<view class="button-group">
+    <button class="go-back-button" bindtap="goBack">返回</button>
+    <button class="call-button" bindtap="callContact" type="primary">呼叫</button>
+    <button class="edit-button" bindtap="editContact">编辑</button>
+</view>
+
+
+<view class="contact-info">
+    <!-- 姓名 -->
+    <view class="form-item">
+        <text class="name">{{name}}</text>
+    </view>
+    <!-- 电话 -->
+    <view class="form-item">
+        <label class="label">电话</label>
+        <text class="phone">{{phone}}</text>
+    </view>
+    <!-- 电子邮件 -->
+    <view class="form-item">
+        <label class="label">邮箱</label>
+        <text class="email">{{email}}</text>
+    </view>
+    <!-- 备注 -->
+    <view class="form-item">
+        <label class="label">备注</label>
+        <text class="note">{{note}}</text>
+    </view>
+</view>
+
+
+<button class="delete-button" bindtap="deleteContact">删除</button>

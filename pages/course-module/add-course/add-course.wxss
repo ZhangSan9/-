@@ -1,0 +1,79 @@
+.button-group{
+    display: flex;
+
+    /* 外间距margin */
+    margin: 10rpx;
+    /* 内间距padding */
+    padding: 10rpx;
+
+    border-radius: 20rpx;
+    border:1px solid black;
+    justify-content: space-between; 
+}
+
+/* 返回按钮 */
+.go-back-button{
+    width: 170rpx !important;
+    background-color: gray;
+}
+
+.course-info{
+    border: 1px solid black;
+    border-radius: 20rpx;
+    /* 外间距margin */
+    margin: 10rpx;
+    /* 内间距padding */
+    padding: 10rpx;
+}
+
+
+.form-item{
+    /* 外间距margin */
+    margin: 10rpx;
+    /* 内间距padding */
+    padding: 10rpx;
+    border: 1px solid black;
+    border-radius: 20rpx;
+
+    display: flex;
+    flex-direction: column;
+    /* 垂直排列 */
+}
+
+.input-field{
+    width: 100%;
+    height: 80rpx;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 20rpx;
+    color: rgb(10, 132, 255);
+}
+
+.label{
+    margin-bottom: 15rpx;
+    font-size: 35rpx;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap; /* 自动换行 */
+}
+
+.checkbox-item{
+    margin-right: 15rpx;
+}
+
+.custom-picker {
+    display: block;
+    border: 1px solid #ccc; /* 边框颜色 */
+    border-radius: 20rpx; /* 圆角边框 */
+    margin: 10rpx;
+    padding: 10rpx;
+    background-color: #f9f9f9; /* 背景颜色 */
+}
+
+.picker-display {
+    font-size: 35rpx; /* 增大字体 */
+    text-align: center; /* 居中显示 */
+    color :rgb(10, 128, 243)
+}

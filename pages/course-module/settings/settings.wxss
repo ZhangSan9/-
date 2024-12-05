@@ -1,0 +1,38 @@
+.button-group {
+    display: flex;
+    align-items: center;
+    /* 外间距margin */
+    margin: 10rpx;
+    /* 内间距padding */
+    padding: 10rpx;
+
+    border-radius: 20rpx;
+    border: 1px solid black;
+    justify-content: space-between;
+}
+
+.go-back-button {
+    width: 40% !important;
+    background-color: gray;
+}
+
+
+.picker-container{
+    border: 1px solid #ccc; /* 边框颜色 */
+    border-radius: 20rpx;
+    padding: 10rpx;
+    margin: 10rpx;
+}
+
+.label{
+    font-size: 40rpx;
+}
+
+.picker-display{
+    display: block;
+    border: 1px solid #ccc; /* 边框颜色 */
+    border-radius: 20rpx;
+    padding: 10rpx;
+    margin: 10rpx;
+    background-color: #f9f9f9; /* 背景颜色 */
+}

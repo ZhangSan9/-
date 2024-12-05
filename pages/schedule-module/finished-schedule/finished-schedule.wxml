@@ -1,0 +1,26 @@
+<!-- pages/schedule-module/finished-schedule/finished-schedule.wxml -->
+
+<view class="button-group">
+    <button class="go-back-button" bind:tap="goBack">返回</button>
+</view>
+
+<view class="schedules-container">
+    <block wx:if="{{finishedSchedules.length > 0}}">
+        <view wx:for="{{finishedSchedules}}" wx:key="id" class="schedule-item" data-id="{{item.id}}">
+            <!-- 显示提醒事项的标题和时间 -->
+            <text class="title">{{item.title}}</text>
+            <text class="date-and-time">
+                {{item.date.year}}年{{item.date.month}}月{{item.date.day}}日 {{item.time.hour}}时{{item.time.minute}}分
+            </text>
+            <!-- 详情信息 -->
+            <text class="detail" bindtap="goToScheduleInfo" data-id="{{item.id}}" style="color: blue; text-decoration: underline; cursor: pointer;">
+                详情信息
+            </text>
+        </view>
+    </block>
+    <block wx:else>
+        <view class="no-schedules">
+            <text>暂无已完成的提醒事项。</text>
+        </view>
+    </block>
+</view>

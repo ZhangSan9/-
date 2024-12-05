@@ -1,0 +1,48 @@
+<view class="button-group">
+    <button class="go-back-button" bindtap="goBack">返回</button>
+    <button class="add-schedule-button" bindtap="addSchedule" type="primary">确认添加</button>
+</view>
+
+<!-- 提醒事项的标题 -->
+<view class="form-item">
+    <label class="label">* 提醒事项标题</label>
+    <input class="input-field" placeholder="必填" type="text" bindinput="onInputTitle"></input>
+</view>
+
+<view class="form-item">
+    <label class="label">备注</label>
+    <input class="input-field" placeholder="可省略" type="text" bindinput="onInputNote"></input>
+</view>
+
+<!-- 选择日期 -->
+<view class="form-item">
+    <label class="label">提醒日期：</label>
+    <picker mode="date" value="{{currentDate}}" bindchange="onDateChange">
+            <text class="picker-display">{{schedule.date.year}}年{{schedule.date.month}}月{{schedule.date.day}}日</text>
+    </picker>
+</view>
+
+<!-- 选择时间 -->
+<view class="form-item">
+    <label class="label">时间: </label>
+    <picker mode="time" value="{{currentTime}}" bindchange="onTimeChange">
+            <text class="picker-display">{{schedule.time.hour}}时{{schedule.time.minute}}分</text>
+    </picker>
+</view>
+
+<view class="form-item">
+    <label class="label">提前提醒：</label>
+    <!-- 选择单位 -->
+    <picker mode="selector" range="{{beforehandUnits}}" bindchange="onBeforehandUnitChange">
+            <text class="picker-display">单位：{{schedule.beforehand.unit}}</text>
+    </picker>
+</view>
+
+
+
+<view class="form-item">
+    <!-- 选择数值 -->
+    <picker mode="selector" range="{{beforehandValues}}" bindchange="onBeforehandValueChange">
+            <text class="picker-display">提前{{schedule.beforehand.value}}{{schedule.beforehand.unit}}</text>
+    </picker>
+</view>

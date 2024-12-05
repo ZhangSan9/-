@@ -1,0 +1,56 @@
+.button-group{
+    display: flex;
+    align-items: center;
+    /* 外间距margin */
+    margin: 10rpx;
+    /* 内间距padding */
+    padding: 10rpx;
+
+    border-radius: 20rpx;
+    border:1px solid black;
+}
+
+.go-back-button{
+    background-color: gray;
+    width: 32%!important;
+}
+
+.delete-button{
+    background-color: lightcoral;
+    width: 32%!important;
+}
+
+.edit-button{
+    width: 32%!important;
+}
+
+.form-item{
+    display: flex;
+    border:1px solid black;
+    border-radius: 20rpx;
+
+    /* 外间距margin */
+    margin: 10rpx;
+    /* 内间距padding */
+    padding: 10rpx;
+}
+
+.label{
+    /* 外间距margin */
+    margin: 10rpx;
+    /* 内间距padding */
+    padding: 10rpx;
+    font-size: 35rpx;
+}
+
+.text{
+    /* 外间距margin */
+    margin: 10rpx;
+    /* 内间距padding */
+    padding: 10rpx;
+    color: rgb(10, 132, 255);
+
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 20rpx;
+}

@@ -1,0 +1,197 @@
+/* pages/weather-module/weather/weather.wxss */
+.search-container {
+    display: flex;
+    align-items: center;
+    padding: 10rpx;
+    border-radius: 20rpx;
+    border: 1px solid black;
+    margin-bottom: 10rpx;
+    margin-left: 10rpx;
+    margin-right: 10rpx;
+}
+
+/* 搜索的icon */
+.search-icon {
+    width: 50rpx;
+    height: 50rpx;
+}
+
+/* 输入栏 */
+.search-input {
+    width: 100%;
+    flex: 1;
+    padding: 8rpx;
+    outline: none;
+    border-bottom: 1px solid gray;
+}
+
+/* 搜索按钮 */
+.search-button {
+    width: 200rpx !important;
+    padding: 8rpx 8rpx;
+    margin-left: 10rpx;
+    background-color: #007aff;
+    color: white;
+    border: none;
+    border-radius: 10rpx;
+}
+
+/* 城市名字的外层容器 */
+.city-name-container {
+    border-radius: 20rpx;
+    background: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
+    margin-left: 10rpx;
+    margin-right: 10rpx;
+}
+
+/* 城市名字样式 */
+.city-name {
+    font-size: 60rpx;
+    /* 根据需要调整字体大小 */
+    font-weight: bold;
+    text-align: center;
+    /* 文本水平居中 */
+    display: block;
+    /* 确保文本为块级元素 */
+}
+
+/* 天气信息展示part-1，包含icon、温度、天气状况 */
+.weather-info-part-1 {
+    background: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+    /* 外间距 */
+    margin-top: 10rpx;
+    margin-bottom: 10rpx;
+    margin-left: 10rpx;
+    margin-right: 10rpx;
+    border-radius: 20rpx;
+
+    display: flex;
+    align-items: center;
+    /* 垂直居中对齐 */
+    justify-content: center;
+    /* 水平居中 */
+}
+
+/* 天气图标的外层容器 */
+.weather-icon-container {
+    margin-right: 20rpx;
+    /* 图标与文字之间的间距 */
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+}
+
+/* 天气图标的样式 */
+.weather-icon {
+    width: 150rpx;
+    height: 150rpx;
+}
+
+.weather-temp-and-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 水平居中 */
+}
+
+.weather-temperature {
+    font-size: 50rpx;
+    margin-bottom: 10rpx;
+}
+
+.weather-text {
+    font-size: 40rpx;
+}
+
+/* 空气质量的外层容器 */
+.airQuality-container {
+    background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    border-radius: 20rpx;
+    /* 外间距 */
+    margin-left: 10rpx;
+    margin-right: 10rpx;
+    margin-bottom: 10rpx;
+    /* 内间距 */
+    padding-left: 20rpx;
+    padding-right: 20rpx;
+    padding-top: 20rpx;
+    padding-bottom: 20rpx;
+}
+
+.airQuality-catagory {
+    font-size: 40rpx;
+}
+
+.separator1 {
+    height: 1px;
+    background-color: black;
+}
+
+/* aqi数值 */
+.airQuality-value {
+    text-align: center;
+    /* 文本水平居中 */
+    display: block;
+    /* 确保文本为块级元素 */
+    font-size: 60rpx;
+}
+
+/*  天气信息展示part-2，包含体感温度、相对湿度、风速  */
+.weather-info-part-2 {
+    background: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+    /* 外间距 */
+    margin-top: 10rpx;
+    margin-bottom: 10rpx;
+    margin-left: 10rpx;
+    margin-right: 10rpx;
+
+    padding-top: 10rpx;
+    padding-bottom: 10rpx;
+    padding-left: 10rpx;
+    padding-right: 10rpx;
+
+    border-radius: 20rpx;
+    display: flex;
+    align-items: center;
+    /* 垂直居中对齐 */
+    justify-content: space-between;
+}
+
+.weather-feelsLike,
+.weather-humidity,
+.weather-windSpeed {
+    display: flex;
+    flex-direction: column;
+    /* 垂直排列 */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* 居中对齐文本 */
+}
+
+.weather-feelsLike-label,
+.weather-humidity-label,
+.weather-windSpeed-label {
+    font-size: 40rpx;
+    /* 标签字体大小 */
+    color: black;
+    /* 标签颜色 */
+}
+
+.weather-feelsLike-value,
+.weather-humidity-value,
+.weather-windSpeed-value {
+    font-size: 40rpx;
+    /* 数值字体大小 */
+    color: black;
+    /* 数值颜色 */
+    font-weight: bold;
+}
+
+/* 体感温度，相对湿度，风速 之间的分割线 */
+.separator2 {
+    width: 1px;
+    height: 80rpx;
+    /* 根据需要调整高度 */
+    background-color: black;
+    /* 分割线颜色 */
+}

@@ -1,0 +1,70 @@
+<view class="button-group">
+    <button class="go-back-button" bindtap="goBack">返回</button>
+    <button class="add-course-button" bindtap="addCourse" type="primary">添加课程</button>
+</view>
+
+<view class="course-info">
+    <!-- 输入课程号，只含数字 -->
+    <view class="form-item">
+        <label class="label">* 课程号 (提交后不许修改)</label>
+        <input id="courseId" type="number" placeholder="数字" bindinput="onCourseIdInput" value="{{course.courseId}}" class="input-field" />
+    </view>
+    <!-- 课程名 -->
+    <view class="form-item">
+        <label class="label">* 课程名</label>
+        <input placeholder="必填" bindinput="onNameInput" value="{{course.name}}" class="input-field" />
+    </view>
+    <!-- 上课地点 -->
+    <view class="form-item">
+        <label class="label">* 上课地点</label>
+        <input placeholder="必填" bindinput="onLocationInput" value="{{course.location}}" class="input-field" />
+    </view>
+    <!-- 教师姓名 -->
+    <view class="form-item">
+        <label class="label">教师姓名</label>
+        <input placeholder="(可省略)" bindinput="onTeacherNameInput" value="{{course.teacherName}}" class="input-field" />
+    </view>
+
+    <!-- 多选第几周上课 -->
+    <view class="form-item">
+        <label class="label">* 第几周上课</label>
+        <checkbox-group bindchange="onWeeksChange">
+            <block wx:for="{{weekOptions}}" wx:key="value">
+                <label class="checkbox-item">
+                    <checkbox value="{{item.value}}" checked="{{item.checked}}" />{{item.value}}周
+                </label>
+            </block>
+        </checkbox-group>
+    </view>
+
+    <!-- 选择每周的星期几上课 -->
+    <view class="form-item">
+        <label class="label">每周的星期几上课</label>
+        <picker mode="selector" range="{{dayOfWeekOptions}}" value="{{selectedDayOfWeekIndex}}" bindchange="onDayOfWeekChange" class="custom-picker">
+            <view class="picker-display">
+                {{dayOfWeekOptions[selectedDayOfWeekIndex]}}
+            </view>
+        </picker>
+    </view>
+
+    <!-- 选择第几节上课 -->
+    <view class="form-item">
+        <label class="label">第几节上课</label>
+        <picker mode="selector" range="{{startPeriodOptions}}" value="{{selectedStartPeriodIndex}}" bindchange="onStartPeriodChange" class="custom-picker">
+            <view class="picker-display">
+                第{{startPeriodOptions[selectedStartPeriodIndex]}}节
+            </view>
+        </picker>
+    </view>
+
+    <!-- 选择上几节课 -->
+    <view class="form-item">
+        <label class="label">上几节课</label>
+        <picker mode="selector" range="{{numPeriodsOptions}}" value="{{selectedNumPeriodsIndex}}" bindchange="onNumPeriodsChange" class="custom-picker">
+            <view class="picker-display">
+                {{numPeriodsOptions[selectedNumPeriodsIndex]}} 节
+            </view>
+        </picker>
+    </view>
+</view>
+

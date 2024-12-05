@@ -1,0 +1,51 @@
+<view class="button-group">
+    <button class="settings" bind:tap="goToSettings">设置</button>
+    <button class="add-course-button" bindtap="addCourse" type="primary">添加课程</button>
+</view>
+
+
+<text class="courses-list">今日课程列表</text>
+<view class="courses-container">
+    <block wx:for="{{todayCourses}}" wx:key="courseId">
+        <view class="course-item" bindtap="goToCourseInfo" data-course="{{item}}">
+            <text>课程名: {{item.name}}</text>
+            <text>教师: {{item.teacherName}}</text>
+            <text>地点: {{item.location}}</text>
+            <text>第{{item.startPeriod}}节</text>
+        </view>
+    </block>
+    <view wx:if="{{todayCourses.length === 0}}">
+        <text>今天没有课！</text>
+    </view>
+</view>
+
+<text class="courses-list">这周课程列表</text>
+<view class="courses-container">
+    <block wx:for="{{weekCourses}}" wx:key="courseId">
+        <view class="course-item" bindtap="goToCourseInfo" data-course="{{item}}">
+            <text>课程名: {{item.name}}</text>
+            <text>教师: {{item.teacherName}}</text>
+            <text>地点: {{item.location}}</text>
+            <text>星期{{item.dayOfWeek}}上课</text>
+        </view>
+    </block>
+    <view wx:if="{{weekCourses.length === 0}}">
+        <text>本周没有课！</text>
+    </view>
+</view>
+
+
+<text class="courses-list">全部课程列表</text>
+<view class="courses-container">
+    <block wx:for="{{courses}}" wx:key="courseId">
+        <view class="course-item" bindtap="goToCourseInfo" data-course="{{item}}">
+            <text>课程名: {{item.name}}</text>
+            <text>地点{{item.location}}</text>
+            <text>第{{item.weeks}}周</text>
+            <text>教师{{item.teacherName}}</text>
+        </view>
+    </block>
+    <view wx:if="{{courses.length === 0}}">
+        <text>没有课！</text>
+    </view>
+</view>

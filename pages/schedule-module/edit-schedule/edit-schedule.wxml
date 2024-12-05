@@ -1,0 +1,56 @@
+<view class="button-group">
+    <button class="go-back-button" bind:tap="goBack">返回</button>
+    <button class="edit-button" bind:tap="saveEdit" type="primary">保存</button>
+</view>
+
+<!-- 包含提醒事项的标题和备注 -->
+<view class="schedule-info">
+    <view class="form-item">
+        <text class="header">标题</text>
+        <!-- 提醒事项的标题 -->
+        <input class="input-field" placeholder="* 提醒事项标题" type="text" value="{{schedule.title}}" bindinput="onInputTitle"></input>
+    </view>
+
+    <view class="form-item">
+        <text class="header">备注</text>
+        <input class="input-field" placeholder="备注" type="text" value="{{schedule.note}}" bindinput="onInputNote"></input>
+    </view>
+
+    <view class="form-item">
+        <text class="header">提醒日期：</text>
+        <picker mode="date" value="{{formattedDate}}" bindchange="onDateChange">
+            <text class="picker-display">
+                {{schedule.date.year}}年{{schedule.date.month}}月{{schedule.date.day}}日
+            </text>
+        </picker>
+    </view>
+
+    <view class="form-item">
+        <text class="header">提醒时间</text>
+        <picker mode="time" value="{{formattedTime}}" bindchange="onTimeChange">
+            <text class="picker-display">
+                {{schedule.time.hour}}时{{schedule.time.minute}}分
+            </text>
+        </picker>
+    </view>
+
+    <view class="form-item">
+        <text class="header">提前提醒：</text>
+        <picker mode="selector" range="{{beforehandUnit}}" value="{{selectedBeforehandUnitIndex}}" bindchange="onBeforehandUnitChange">
+            <text class="picker-display">单位：{{schedule.beforehand.unit}}</text>
+        </picker>
+    </view>
+
+    <view class="form-item">
+        <picker mode="selector" range="{{beforehandValues}}" value="{{selectedBeforehandValueIndex}}" bindchange="onBeforehandValueChange">
+            <text class="picker-display">提前: {{schedule.beforehand.value}}{{schedule.beforehand.unit}}</text>
+        </picker>
+    </view>
+
+    <view class="form-item">
+        <text class="header">完成状态：</text>
+        <picker mode="selector" range="{{stateOptions}}" value="{{selectedStateOptionsIndex}}" bindchange="onStateChange">
+            <text class="picker-display">{{schedule.state}}</text>
+        </picker>
+    </view>
+</view>

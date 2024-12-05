@@ -1,0 +1,82 @@
+.time-container{
+    font-size: 50rpx;
+    display: flex;
+    flex-direction: row; /* 垂直排列子元素 */
+    justify-content: center; /* 垂直居中 */
+    align-items: center; /* 水平居中 */
+    text-align: center; /* 文本居中 */
+}
+
+.current-date{
+    margin-right: 20rpx;
+}
+
+.current-time{
+    color: rgb(10, 132, 255);
+}
+
+.button-group{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* 外间距margin */
+    margin: 10rpx;
+    /* 内间距padding */
+    padding: 10rpx;
+    border-radius: 20rpx;
+    border: 1px solid black;
+}
+
+/* 已完成按钮 */
+.finised-button {
+    width: 200rpx !important;
+    background-color: gray;
+}
+
+.overdue-header,
+.today-header,
+.tomorrow-header,
+.unfinished-header{
+    font-size: 45rpx;
+    font-weight: bold;
+    margin-left: 20rpx;
+}
+
+.overdue-header{
+    color: red;
+}
+.today-header{
+    color: rgb(11, 132, 255);
+}
+
+.unfinished-header{
+    color: #FFD700;
+}
+
+.schedules-container{
+    border-radius: 20rpx;
+    border: 1px solid black;
+    /* 外间距margin */
+    margin: 10rpx;
+    /* 内间距padding */
+    padding: 10rpx;
+}
+
+.schedule-item{
+    border-radius: 20rpx;
+    border: 1px solid black;
+    /* 外间距margin */
+    margin: 10rpx;
+    /* 内间距padding */
+    padding: 10rpx;
+}
+
+.title{
+    font-size: 40rpx;
+    font-weight: bold;
+}
+.date-and-time,
+.detail{
+    font-size: 35rpx;
+}
+

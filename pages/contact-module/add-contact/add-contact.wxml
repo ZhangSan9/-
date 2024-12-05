@@ -1,0 +1,27 @@
+<!-- add-contact.wxml -->
+
+<view class="button-group">
+    <!-- 跳转回联系人列表页面 -->
+    <button class="go-back-button" bindtap="goBack">返回</button>
+    <!-- 添加联系人按钮 -->
+    <button class="submit-button" bindtap="onSubmit" type="primary">添加联系人</button>
+</view>
+
+<view class="form-container">
+    <view class="form-item">
+        <text>* 姓名：</text>
+        <input placeholder="请输入姓名" bindinput="onNameInput" value="{{name}}" class="input-field" />
+    </view>
+    <view class="form-item">
+        <text>* 电话：</text>
+        <input placeholder="请输入11位电话号码" maxlength="11" bindinput="onPhoneInput" value="{{phone}}" class="input-field" type="number" />
+    </view>
+    <view class="form-item">
+        <text>邮箱：</text>
+        <input placeholder="请输入邮箱" bindinput="onEmailInput" value="{{email}}" class="input-field" type="email" />
+    </view>
+    <view class="form-item">
+        <text>备注：</text>
+        <input placeholder="备注信息" bindinput="onNoteInput" value="{{note}}" class="input-field"></input>
+    </view>
+</view>

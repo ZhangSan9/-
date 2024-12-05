@@ -1,0 +1,33 @@
+<view class="button-group">
+    <button class="go-back-button" bind:tap="goBack">返回</button>
+    <button class="delete-button" bind:tap="deleteSchedule">删除</button>
+    <button class="edit-button" bind:tap="editSchedule">编辑</button>
+</view>
+
+<view class="schedule-info">
+    <view class="form-item">
+        <label class="label">标题: </label>
+        <text class="value">{{schedule.title}}</text>
+    </view>
+
+    <view class="form-item">
+        <label class="label">备注: </label>
+        <text class="value">{{schedule.note}}</text>
+    </view>
+    <view class="form-item">
+        <label class="label">日期: </label>
+        <text class="value">{{schedule.date.year}}年{{schedule.date.month}}月{{schedule.date.day}}日</text>
+    </view>
+    <view class="form-item">
+        <label class="label">时间: </label>
+        <text class="value">{{schedule.time.hour}}时{{schedule.time.minute}}分</text>
+    </view>
+    <view class="form-item">
+        <label class="label">提前提醒: </label>
+        <text class="value">{{schedule.beforehand.value}}{{schedule.beforehand.unit}}</text>
+    </view>
+    <view class="form-item">
+        <label class="label">状态: </label>
+        <text class="value">{{schedule.state}}</text>
+    </view>
+</view>

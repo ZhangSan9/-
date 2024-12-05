@@ -1,0 +1,55 @@
+<!-- pages/weather-module/weather/weather.wxml -->
+
+<!-- 搜索栏 -->
+<view class="search-container">
+    <image class="search-icon" src="/images/search.png"></image>
+    <input class="search-input" bindinput="onInput" type="text" placeholder="请输入城市名" />
+    <button class="search-button" bindtap="onSearch">搜索</button>
+</view>
+
+<!-- 加载中提示 -->
+<view wx:if="{{loading}}">
+    <text>加载中...</text>
+</view>
+
+<!-- 显示城市名 -->
+<view class="city-name-container">
+    <text class="city-name">{{weather.city}}</text>
+</view>
+
+<!-- 天气信息展示part-1，包含icon、温度、天气状况 -->
+<view class="weather-info-part-1">
+    <!-- icon -->
+    <view class="weather-icon-container">
+        <image class="weather-icon" src="{{imagePath}}"></image>
+    </view>
+    <!-- 温度和天气 -->
+    <view class="weather-temp-and-text">
+        <text class="weather-temperature">{{weather.temperature}}°C</text>
+        <text class="weather-text">{{weather.text}}</text>
+    </view>
+</view>
+
+<view class="airQuality-container">
+    <text class="airQuality-catagory">空气质量 {{airQuality.catagory}}</text>
+    <view class="separator1"></view><!-- 分割线 -->
+    <text class="airQuality-value">{{airQuality.aqi}}</text>
+</view>
+
+<!-- 天气信息展示part-2，包含体感温度、相对湿度、风速 -->
+<view class="weather-info-part-2">
+    <view class="weather-feelsLike">
+        <text class="weather-feelsLike-label">体感温度</text>
+        <text class="weather-feelsLike-value">{{weather.feelsLike}} ℃</text>
+    </view>
+    <view class="separator2"></view>
+    <view class="weather-humidity">
+        <text class="weather-humidity-label">相对湿度</text>
+        <text class="weather-humidity-value">{{weather.humidity}} %</text>
+    </view>
+    <view class="separator2"></view>
+    <view class="weather-windSpeed">
+        <text class="weather-windSpeed-label">风速</text>
+        <text class="weather-windSpeed-value">{{weather.windSpeed}}km/h</text>
+    </view>
+</view>

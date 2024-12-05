@@ -1,0 +1,43 @@
+.button-group{
+    display: flex;
+    align-items: center;
+    /* 外间距margin */
+    margin: 10rpx;
+    /* 内间距padding */
+    padding: 10rpx;
+
+    border-radius: 20rpx;
+    border:1px solid black;
+}
+/* 设置按钮 */
+.settings{
+    width: 40%!important;
+    background-color: gray;
+}
+
+.courses-list{
+    font-size: 40rpx;
+    margin-left: 20rpx;
+    color: rgb(10, 132, 255);
+}
+
+.courses-container{
+    /* 外间距margin */
+    margin: 10rpx;
+    /* 内间距padding */
+    padding: 10rpx;
+
+    border-radius: 20rpx;
+    border: 1px solid black;
+}
+
+.course-item {
+    font-weight: bold;
+    /* 外间距margin */
+    margin: 10rpx;
+    /* 内间距padding */
+    padding: 10rpx;
+
+    border-radius: 20rpx;
+    border: 1px solid black;
+}

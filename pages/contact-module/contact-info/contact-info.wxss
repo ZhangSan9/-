@@ -1,0 +1,75 @@
+/* pages/contacts-module/contact-info/contact-info.wxss */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    /* 外间距margin */
+    margin: 10rpx;
+    /* 内间距padding */
+    padding: 10rpx;
+
+    border-radius: 20rpx;
+    border: 1px solid black;
+}
+
+/* 返回按钮，编辑按钮 */
+.go-back-button,
+.edit-button {
+    width: 170rpx !important;
+    background-color: gray;
+}
+
+/* 呼叫按钮 */
+.call-button {
+    width: 300rpx !important;
+}
+
+/* 联系人的信息 */
+.contact-info {
+    border: 1px solid black;
+    border-radius: 20rpx;
+    /* 外间距margin */
+    margin: 10rpx;
+    /* 内间距padding */
+    padding: 10rpx;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 20rpx;
+    border: 1px solid rgb(28, 28, 30);
+    /* 外间距margin */
+    margin: 10rpx;
+    /* 内间距padding */
+    padding: 10rpx;
+}
+
+.name {
+    display: flex;
+    justify-content: center;
+    /* 水平居中 */
+    align-items: center;
+    /* 垂直居中，若需要 */
+
+    font-size: 80rpx;
+    color: rgb(10, 132, 255);
+}
+
+.phone,
+.email,
+.note {
+    font-size: 35rpx;
+    color: rgb(10, 128, 243);
+}
+
+.label {
+    margin-bottom: 10rpx;
+    border-bottom: 1px solid gray;
+}
+
+/* 删除按钮 */
+.delete-button {
+    background-color: #FF4500;
+    margin-top: 20rpx;
+}

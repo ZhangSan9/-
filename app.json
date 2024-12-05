@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/contact-module/contact-list/contact-list",
+    "pages/contact-module/contact-info/contact-info",
+    "pages/contact-module/add-contact/add-contact",
+    "pages/contact-module/edit-contact/edit-contact",
+    
+    "pages/course-module/add-course/add-course",
+    "pages/course-module/edit-course/edit-course",
+    "pages/course-module/course-list/course-list",
+    "pages/course-module/course-info/course-info",
+    "pages/course-module/settings/settings",
+
+    "pages/schedule-module/schedule-list/schedule-list",
+    "pages/schedule-module/edit-schedule/edit-schedule",
+    "pages/schedule-module/add-schedule/add-schedule",
+    "pages/schedule-module/schedule-info/schedule-info",
+    "pages/schedule-module/finished-schedule/finished-schedule",
+
+    "pages/weather-module/weather/weather"
+    
+  ],
+  "style": "v2",
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarBackgroundColor": "#ffffff"
+  },
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/contact-module/contact-list/contact-list",
+        "text": "联系人"
+      },
+      {
+        "pagePath": "pages/course-module/course-list/course-list",
+        "text": "我的课表"
+      },
+      {
+        "pagePath": "pages/schedule-module/schedule-list/schedule-list",
+        "text": "提醒事项"
+      },
+      {
+        "pagePath": "pages/weather-module/weather/weather",
+        "text": "天气"
+      }
+    ]
+  }
+}

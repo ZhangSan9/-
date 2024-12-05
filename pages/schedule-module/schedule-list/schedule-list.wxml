@@ -1,0 +1,117 @@
+<!-- 显示时间 -->
+<view class="time-container">
+    <text class="current-date">{{currentDate}}</text>
+    <text class="current-time">{{currentTime}}</text>
+</view>
+
+<!-- 已完成、新提醒事项、按钮 -->
+<view class="button-group">
+    <button class="finised-button" bind:tap="goToFinishedSchedule">已完成</button>
+    <button class="add-button" bindtap="addSchedule" type="primary">新建</button>
+</view>
+
+<text class="overdue-header">已逾期</text>
+
+<!-- 已逾期的提醒事项 -->
+<view class="schedules-container">
+    <block wx:if="{{overdueSchedules.length > 0}}">
+        <view wx:for="{{overdueSchedules}}" wx:key="id" class="schedule-item">
+            <!-- 复选框 -->
+            <checkbox class="checkbox" bindtap="onCheckboxChange" value="{{item.id}}" data-id="{{item.id}}"></checkbox>
+            <!-- 显示提醒事项的标题和时间 -->
+            <text class="title">{{item.title}}</text>
+            <text class="date-and-time">
+                {{item.date.year}}年{{item.date.month}}月{{item.date.day}}日 {{item.time.hour}}时{{item.time.minute}}分
+            </text>
+
+            <!-- 详情信息 -->
+            <text class="detail" bindtap="goToScheduleInfo" data-id="{{item.id}}" style="color: red; text-decoration: underline; cursor: pointer;">
+                详情信息
+            </text>
+        </view>
+    </block>
+    <block wx:else>
+        <view class="no-schedules">
+            <text>暂无已逾期的提醒事项。</text>
+        </view>
+    </block>
+</view>
+
+
+<text class="today-header">今天</text>
+<view class="schedules-container">
+    <block wx:if="{{todaySchedules.length > 0}}">
+        <view wx:for="{{todaySchedules}}" wx:key="id" class="schedule-item" data-id="{{item.id}}">
+            <!-- 复选框 -->
+            <checkbox class="checkbox" bindtap="onCheckboxChange" value="{{item.id}}" data-id="{{item.id}}"></checkbox>
+            <!-- 显示提醒事项的标题和时间 -->
+            <text class="title">{{item.title}}</text>
+            <text class="date-and-time">
+                {{item.date.year}}年{{item.date.month}}月{{item.date.day}}日 {{item.time.hour}}时{{item.time.minute}}分
+            </text>
+
+            <!-- 详情信息 -->
+            <text class="detail" bindtap="goToScheduleInfo" data-id="{{item.id}}" style="color: blue; text-decoration: underline; cursor: pointer;">
+                详情信息
+            </text>
+        </view>
+    </block>
+    <block wx:else>
+        <view class="no-schedules">
+            <text>今天暂无提醒事项。</text>
+        </view>
+    </block>
+</view>
+
+<text class="tomorrow-header">明天</text>
+<view class="schedules-container">
+    <block wx:if="{{tomorrowSchedules.length > 0}}">
+        <view wx:for="{{tomorrowSchedules}}" wx:key="id" class="schedule-item" data-id="{{item.id}}">
+            <!-- 复选框 -->
+            <checkbox class="checkbox" bindtap="onCheckboxChange" value="{{item.id}}" data-id="{{item.id}}"></checkbox>
+            <!-- 显示提醒事项的标题和时间 -->
+            <text class="title">{{item.title}}</text>
+            <text class="date-and-time">
+                {{item.date.year}}年{{item.date.month}}月{{item.date.day}}日 {{item.time.hour}}时{{item.time.minute}}分
+            </text>
+
+            <!-- 详情信息 -->
+            <text class="detail" bindtap="goToScheduleInfo" data-id="{{item.id}}" style="color: blue; text-decoration: underline; cursor: pointer;">
+                详情信息
+            </text>
+        </view>
+    </block>
+    <block wx:else>
+        <view class="no-schedules">
+            <text>明天暂无提醒事项。</text>
+        </view>
+    </block>
+</view>
+
+
+<text class="unfinished-header">未完成</text>
+
+<!-- 未完成的提醒事项 -->
+<view class="schedules-container">
+    <block wx:if="{{unfinishedSchedules.length > 0}}">
+        <view wx:for="{{unfinishedSchedules}}" wx:key="id" class="schedule-item" data-id="{{item.id}}">
+            <!-- 复选框 -->
+            <checkbox class="checkbox" bindtap="onCheckboxChange" value="{{item.id}}" data-id="{{item.id}}"></checkbox>
+            <!-- 显示提醒事项的标题和时间 -->
+            <text class="title">{{item.title}}</text>
+            <text class="date-and-time">
+                {{item.date.year}}年{{item.date.month}}月{{item.date.day}}日 {{item.time.hour}}时{{item.time.minute}}分
+            </text>
+
+            <!-- 详情信息 -->
+            <text class="detail" bindtap="goToScheduleInfo" data-id="{{item.id}}" style="color: blue; text-decoration: underline; cursor: pointer;">
+                详情信息
+            </text>
+        </view>
+    </block>
+    <block wx:else>
+        <view class="no-schedules">
+            <text>暂无未完成的提醒事项。</text>
+        </view>
+    </block>
+</view>

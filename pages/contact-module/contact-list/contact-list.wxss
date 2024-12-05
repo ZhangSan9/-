@@ -1,0 +1,64 @@
+.search-container {
+    display: flex;
+    align-items: center;
+    padding: 10rpx;
+    border-radius: 20rpx;
+    border:1px solid black;
+    margin-bottom: 10rpx;
+    margin-left: 10rpx;
+    margin-right: 10rpx;
+}
+
+.search-icon{
+    width: 50rpx;
+    height: 50rpx;
+}
+
+.search-input {
+    width: 100%;
+    flex: 1;
+    padding: 8rpx;
+    outline: none;
+    border-bottom: 1px solid gray;
+}
+
+.search-button {
+    width: 200rpx !important;
+    padding: 8rpx 8rpx;
+    margin-left: 10rpx;
+    background-color: #007aff;
+    color: white;
+    border: none;
+    border-radius: 10rpx;
+}
+
+
+.contact-list {
+    /* 内侧间距 */
+    padding: 10rpx;
+    /* 外侧间距 */
+    margin: 10rpx;
+
+    border-radius: 20rpx;
+    border: 1px solid black;
+}
+
+.contact-item {
+    border: 1px solid gray;
+    border-radius: 20rpx;
+    height: 60rpx;
+    font-weight: bold;
+    /* 内侧间距 */
+    padding: 10rpx;
+    /* 外侧间距 */
+    margin: 10rpx;
+    
+    display: flex; /* 使用 Flex 布局 */
+    align-items: center; /* 垂直居中 */
+}
+
+.add-contact-button{
+    background-color: rgb(137, 217, 97);
+    margin-top: 10rpx;
+} 
+

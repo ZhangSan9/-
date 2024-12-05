@@ -1,0 +1,25 @@
+<view class="button-group">
+    <button class="go-back-button" bindtap="goBack">返回</button>
+    <button class="save-button" bindtap="saveContact" type="primary">保存</button>
+</view>
+
+
+<view class="contact-edit">
+    <view class="form-item">
+        <text class="label">* 姓名：</text>
+        <input placeholder="请输入姓名" bindinput="onNameInput" value="{{name}}" class="input-field" />
+    </view>
+    <view class="form-item">
+        <text class="label">* 电话：</text>
+        <input placeholder="请输入电话" bindinput="onPhoneInput" value="{{phone}}" class="input-field" type="number" />
+    </view>
+    <view class="form-item">
+        <text class="label">邮箱：</text>
+        <input placeholder="请输入邮箱" bindinput="onEmailInput" value="{{email}}" class="input-field" type="email" />
+    </view>
+    <view class="form-item">
+        <text class="label">备注：</text>
+        <input placeholder="请输入备注" bindinput="onNoteInput" value="{{note}}" class="input-field" />
+    </view>
+
+</view>

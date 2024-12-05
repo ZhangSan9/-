@@ -1,0 +1,39 @@
+.button-group{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* 外间距margin */
+    margin: 10rpx;
+    /* 内间距padding */
+    padding: 10rpx;
+
+    border-radius: 20rpx;
+    border: 1px solid black;
+}
+
+.go-back-button{
+    background-color: gray;
+}
+
+.schedules-container{
+    border-radius: 20rpx;
+    border: 1px solid black;
+    /* 外间距margin */
+    margin: 10rpx;
+    /* 内间距padding */
+    padding: 10rpx;
+}
+
+.schedule-item{
+    border-radius: 20rpx;
+    border: 1px solid black;
+    /* 外间距margin */
+    margin: 10rpx;
+    /* 内间距padding */
+    padding: 10rpx;
+}
+
+.title{
+    font-size: 40rpx;
+    font-weight: bold;
+}
